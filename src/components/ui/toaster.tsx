@@ -1,11 +1,11 @@
 import {
-  ToastProvider,
   Toast,
-  ToastTitle,
-  ToastDescription,
   ToastClose,
+  ToastDescription,
+  ToastProvider,
+  ToastTitle,
   ToastViewport,
-} from '@radix-ui/react-toast'
+} from '../../components/ui/toast'
 import { useToast } from '../../hooks/use-toast'
 
 export function Toaster() {

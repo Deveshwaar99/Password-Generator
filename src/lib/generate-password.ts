@@ -12,6 +12,7 @@ export const generatePassword = (conditions: ConditionsType, length: number) => 
   const symbols = '!@#$%^&*()_+-=[]{}|;:,.<>?'
 
   const { includeLowercase, includeUppercase, includeNumbers, includeSymbols } = conditions
+  console.log({ includeLowercase, includeNumbers, includeUppercase, includeSymbols, length })
 
   let charSet = ''
   let newPassword = ''
@@ -55,7 +56,7 @@ export const generatePassword = (conditions: ConditionsType, length: number) => 
 function shuffleString(str: string): string {
   const arr = str.split('')
 
-  for (let i = arr.length - 1; arr.length > 0; i++) {
+  for (let i = arr.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * i)
     const temp = arr[i]
     arr[i] = arr[j]
